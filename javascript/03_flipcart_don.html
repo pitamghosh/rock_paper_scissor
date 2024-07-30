@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Shiping calculator</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+    .css-input{
+        font-size: 15px;
+        padding: 10px;
+
+    }
+    .cost-btn{
+        background-color: rgb(72, 14, 231);
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+
+    <h1><p style="font-size: larger; font-weight: bolder;">Flipkart Shiping calculator</p></h1>
+
+    <input type="text "placeholder="cost of the order" class="js-input css-input" onkeydown="keyBoardEnterKey(event)">
+
+    <button 
+    
+    onclick="calculateTotal();
+    " class="cost-btn">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+    <script>
+
+        function calculateTotal(){
+           let inputElement = document.querySelector('.js-input');
+
+           let cost  = Number(inputElement.value);
+
+           if(cost<3200){
+            cost=cost+80;
+           }
+
+           document.querySelector('.js-total-cost').innerHTML = `₹${cost}`;
+           
+        }
+
+        function keyBoardEnterKey(event){
+            if(event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-4: Objects in Js</title>
+</head>
+<body>
+    <h1>Chapter-4 Objects in JS</h1>
+    <script>
+    //   const product = {
+    //     // property : value
+    //     name : 'shoes',
+    //     price : 2000
+    //   };
+
+  
+
+    //   console.log(product);
+
+    //   console.log(product.name);
+    //   console.log(product.price);
+
+    //   product.name = 'Jeans Pant';
+    //   console.log(product);
+
+    //   product.brand = 'Denim';
+    //   console.log(product);
+
+    //   delete product.brand;
+    //   console.log(product);
+
+    // const product2 = {
+    //     'name': 'shirt',
+    //     "brand": "polo",
+    //     // bracket notation
+    //     'design_time': '1 day',
+
+    //     //nested object
+    //     ratings : {
+    //         'stars':'4.5',
+    //         'count':'95'
+    //     },
+
+    //     // function
+    //     myFunction : function function1(){
+    //         console.log("function inside the product 2 object");
+    //     }
+    // };
+
+    // console.log(product2);
+    // // console.log(product2.design_time);
+    // // console.log(product2['name']);
+
+    // console.log(product2.ratings.count);
+
+    // product2.myFunction();
+
+
+    // types of object in js
+    // 4 types
+    // built in objects
+    // console, Math, JSON(Javascript Object Notation), localStorage
+
+    // console.log(typeof console);
+    // console.log(typeof Math);
+
+    //JSON
+
+    // JSON OBJECT VS JS OBJECT
+    
+    let product = {
+        name : 'shoes',
+        price : 2000
+    }
+
+    const jsonString  = JSON.stringify(product);
+    console.log(jsonString);
+
+    const jsObject = JSON.parse(jsonString);
+    console.log(typeof jsObject);
+
+    </script>
+</body>
+</html>
