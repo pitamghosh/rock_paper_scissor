@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter-5 : Project 1</title>
+    <style>
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+      }
+      .sub-btn{
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .is-subscribed{
+        background-color: rgb(233, 233, 233);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button
+      onclick="subscribe();"
+      class="js-sub-btn sub-btn"
+    >
+      Subscribe
+    </button>
+
+    <script>
+      function subscribe() {
+        let buttonElement = document.querySelector(".js-sub-btn");
+
+        if (buttonElement.innerText === "Subscribe") {
+          buttonElement.innerText = "Subscribed";
+          buttonElement.classList.add('is-subscribed');
+        } else {
+          buttonElement.innerText = "Subscribe";
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+
+
+    when we click the button
+
+    1. if the text is "subscribe" => "subscribed"
+
+    2. otherwise changes it back => "subscribe"
+
+-->
